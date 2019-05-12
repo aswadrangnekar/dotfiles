@@ -6,9 +6,9 @@ alias python='python3'
 # powerline
 # ref: https://fedoramagazine.org/add-power-terminal-powerline/
 if [ -f `which powerline-daemon` ]; then
-  if [ -d $HOME/.config/powerline ]; then
+  if [ ! -d $HOME/.config/powerline ]; then
     mkdir $HOME/.config/powerline
-    if [ -f $HOME/.config/powerline/config.json ]; then
+    if [ ! -f $HOME/.config/powerline/config.json ]; then
       cp $DF_HOME/.config/powerline/config.json $HOME/.config/powerline/config.json
     fi
   fi
